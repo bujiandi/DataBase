@@ -1,0 +1,8 @@
+/.DS_Store
+xcschememanagement.plist
+*.xcworkspacedata
+*.xcscheme
+/DataBase.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.xcuserstate
+*.xctimeline
+*.xcplayground
