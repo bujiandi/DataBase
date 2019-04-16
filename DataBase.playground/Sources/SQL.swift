@@ -244,7 +244,7 @@ open class DBRowSetBase {
     }
     
     open func getColumnIndex(_ columnName: String) -> Int {
-        return _columns.index(where: { $0 == columnName.lowercased() }) ?? NSNotFound
+        return _columns.firstIndex(where: { $0 == columnName.lowercased() }) ?? NSNotFound
     }
     
     open var columnCount:Int { return _columns.count }
@@ -260,7 +260,7 @@ open class DBRowSet<T:DBTableType>: DBRowSetBase {
     }
     
     open func getColumnIndex(_ column: T) -> Int {
-        return _columns.index(where: { $0 == "\(column)".lowercased() }) ?? NSNotFound
+        return _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) ?? NSNotFound
     }
     
     
@@ -274,13 +274,13 @@ open class DBRowSet<T:DBTableType>: DBRowSetBase {
         return Int(truncatingIfNeeded: getInt64(column))
     }
     open func getInt64(_ column: T) -> Int64 {
-        guard let index = _columns.index(where: { $0 == "\(column)".lowercased() }) else {
+        guard let index = _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) else {
             return 0
         }
         return sqlite3_column_int64(_stmt, CInt(index))
     }
     open func getDouble(_ column: T) -> Double {
-        guard let index = _columns.index(where: { $0 == "\(column)".lowercased() }) else {
+        guard let index = _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) else {
             return 0
         }
         return sqlite3_column_double(_stmt, CInt(index))
@@ -289,7 +289,7 @@ open class DBRowSet<T:DBTableType>: DBRowSetBase {
         return Float(getDouble(column))
     }
     open func getString(_ column: T) -> String! {
-        guard let index = _columns.index(where: { $0 == "\(column)".lowercased() }) else {
+        guard let index = _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) else {
             return nil
         }
         guard let data = sqlite3_column_text(_stmt, CInt(index)) else {
@@ -298,7 +298,7 @@ open class DBRowSet<T:DBTableType>: DBRowSetBase {
         return String(cString: data)
     }
     open func getData(_ column: T) -> Data! {
-        guard let index = _columns.index(where: { $0 == "\(column)".lowercased() }) else {
+        guard let index = _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) else {
             return nil
         }
         let data:UnsafeRawPointer = sqlite3_column_blob(_stmt, CInt(index))
@@ -306,7 +306,7 @@ open class DBRowSet<T:DBTableType>: DBRowSetBase {
         return Data(bytes: data, count: Int(size))
     }
     open func getDate(_ column: T) -> Date! {
-        guard let index = _columns.index(where: { $0 == "\(column)".lowercased() }) else {
+        guard let index = _columns.firstIndex(where: { $0 == "\(column)".lowercased() }) else {
             return nil
         }
         let columnType = sqlite3_column_type(_stmt, CInt(index))
