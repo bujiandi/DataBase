@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39E59DD81FBD703500ADCBF0 /* DataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E59DD61FBD703500ADCBF0 /* DataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		432FD4B722713D6D008CDFD4 /* DataBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 432FD4B522713D6D008CDFD4 /* DataBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		437DD7FD21C0A5E600549389 /* SQLiteRowDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DD7FC21C0A5E600549389 /* SQLiteRowDecoder.swift */; };
 		437DD80121C0A72C00549389 /* SQLiteUnkeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DD7FE21C0A72B00549389 /* SQLiteUnkeyedContainer.swift */; };
 		437DD80221C0A72C00549389 /* SQLiteValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437DD7FF21C0A72B00549389 /* SQLiteValueContainer.swift */; };
@@ -25,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		06165F241D8110E600722320 /* DataBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		39E59DD51FBD703500ADCBF0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39E59DD61FBD703500ADCBF0 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		432FD4B522713D6D008CDFD4 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		432FD4B622713D6D008CDFD4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437DD7FC21C0A5E600549389 /* SQLiteRowDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteRowDecoder.swift; path = DataBase.playground/Sources/SQLiteRowDecoder.swift; sourceTree = "<group>"; };
 		437DD7FE21C0A72B00549389 /* SQLiteUnkeyedContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteUnkeyedContainer.swift; path = DataBase.playground/Sources/SQLiteUnkeyedContainer.swift; sourceTree = "<group>"; };
 		437DD7FF21C0A72B00549389 /* SQLiteValueContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SQLiteValueContainer.swift; path = DataBase.playground/Sources/SQLiteValueContainer.swift; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 		06165F1A1D8110E600722320 = {
 			isa = PBXGroup;
 			children = (
+				432FD4B422713D6D008CDFD4 /* Support Files */,
 				06500D381D81115900156E8A /* DataBase */,
-				39E59DD41FBD703500ADCBF0 /* Supporting Files */,
 				06165F251D8110E600722320 /* Products */,
 				43BD6B4D21A6711200B7F55D /* Frameworks */,
 			);
@@ -82,13 +82,13 @@
 			name = DataBase;
 			sourceTree = "<group>";
 		};
-		39E59DD41FBD703500ADCBF0 /* Supporting Files */ = {
+		432FD4B422713D6D008CDFD4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				39E59DD51FBD703500ADCBF0 /* Info.plist */,
-				39E59DD61FBD703500ADCBF0 /* DataBase.h */,
+				432FD4B522713D6D008CDFD4 /* DataBase.h */,
+				432FD4B622713D6D008CDFD4 /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		43BD6B4321A66FEF00B7F55D /* SQL */ = {
@@ -147,7 +147,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39E59DD81FBD703500ADCBF0 /* DataBase.h in Headers */,
+				432FD4B722713D6D008CDFD4 /* DataBase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +377,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -408,7 +408,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
